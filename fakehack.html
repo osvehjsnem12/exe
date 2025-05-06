@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>해킹됨</title>
+  <style>
+    body {
+      background-color: black;
+      color: red;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      padding-top: 100px;
+    }
+    button {
+      margin-top: 50px;
+      padding: 20px;
+      font-size: 18px;
+      border: none;
+      background-color: red;
+      color: white;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+    img {
+      max-width: 80%;
+      height: auto;
+      display: none;
+      margin-top: 20px;
+    }
+    #finalText {
+      font-size: 24px;
+      color: white;
+      margin-top: 20px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>당신의 유심은 SKT 유심으로 교체되었습니다.</h1>
+  <h2>당신의 기기의 개인정보가 해킹되었습니다.</h2>
+  <button onclick="showHack()">해킹을 무효화 하겠습니까?</button>
+  <br>
+  <img id="clown" src="https://i.imgur.com/G5vgaLk.jpg" alt="Clown">
+  <div id="finalText">축하합니다. 당신의 기기가 햐킹 당했습니다.🎉🎉</div>
+  <audio id="sound" src="https://www.soundjay.com/human/sounds/scream-01.mp3"></audio>
+
+  <script>
+    function showHack() {
+      document.getElementById("clown").style.display = "block";
+      document.getElementById("finalText").style.display = "block";
+      document.getElementById("sound").play();
+    }
+  </script>
+</body>
+</html>
