@@ -21,33 +21,33 @@
       cursor: pointer;
       border-radius: 10px;
     }
-    img {
-      max-width: 80%;
-      height: auto;
-      display: none;
-      margin-top: 20px;
-    }
     #finalText {
       font-size: 24px;
       color: white;
       margin-top: 20px;
       display: none;
     }
+    #originalContent {
+      display: block;
+    }
   </style>
 </head>
 <body>
-  <h1>당신의 유심은 SKT 유심으로 교체되었습니다.</h1>
-  <h2>당신의 기기의 개인정보가 해킹되었습니다.</h2>
-  <button onclick="showHack()">해킹을 무효화 하겠습니까?</button>
-  <br>
-  <img id="clown" src="https://i.imgur.com/G5vgaLk.jpg" alt="Clown">
+  <div id="originalContent">
+    <h1>당신의 유심은 SKT 유심으로 교체되었습니다.</h1>
+    <h2>당신의 기기의 개인정보가 해킹되었습니다.</h2>
+    <button onclick="showHack()">해킹을 무효화 하겠습니까?</button>
+  </div>
   <div id="finalText">축하합니다. 당신의 기기가 해킹 당했습니다.🎉🎉</div>
   <audio id="sound" src="https://www.soundjay.com/human/sounds/scream-01.mp3"></audio>
 
   <script>
     function showHack() {
-      document.getElementById("clown").style.display = "block";
+      // 기존 내용 숨기기
+      document.getElementById("originalContent").style.display = "none";
+      // 새로운 텍스트 보여주기
       document.getElementById("finalText").style.display = "block";
+      // 소리 재생
       document.getElementById("sound").play();
     }
   </script>
